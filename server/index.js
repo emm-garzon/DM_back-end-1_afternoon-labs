@@ -16,6 +16,9 @@ app.get("/api/users", (req, res) => {
 });
 
 app.get("/weather/:temperature", (req, res) => {
-  const phrase = `<h3>It was ${req.params.temperature} today</h3>`;
+  console.log(req.params);
+  //   const { temperature } = req.params;
+  //   const phrase = `<h3>It was ${temperature} today</h3>`;
+  const phrase = `<h1>It was ${req.params.temperature} today!</h1>`;
   res.status(200).send(phrase);
 });
